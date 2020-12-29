@@ -5,6 +5,9 @@ on: push
 jobs:
   backup:
     env:
+      BACKUP_DIR: ./repos 
+      GH_API_URL: https://api.github.com
+      GH_PAGE_SIZE: 100
       GH_SOURCE_ACCOUNT: ${{ secrets.GH_SOURCE_ACCOUNT }}
       GH_BACKUP_ACCOUNT: ${{ secrets.GH_BACKUP_ACCOUNT }}
       GH_BACKUP_ACCOUNT_TOKEN: ${{ secrets.GH_BACKUP_ACCOUNT_TOKEN }}
